@@ -1,3 +1,12 @@
+About My Work
+==========
+
+Traced and Understood the structure of OM2M.
+Contributed in designing the kichen_ipu structure.
+Coordinated with high level website api and low level Raspberry Pi and LinketItOne.
+
+
+
 About OM2M
 ==========
 
