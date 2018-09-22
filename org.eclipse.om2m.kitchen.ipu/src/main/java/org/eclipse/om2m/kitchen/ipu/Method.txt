@@ -1,0 +1,63 @@
+-----------------
+doExecute(POST)
+
+Add a device to the list :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[ip]/[port]/AddDevice/[deviceName]
+
+Remove a device from the list :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[deviceId]/RemoveDevice/true
+
+Connect only one device :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[deviceId]/Connect/true
+
+Connect all devices in the list :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/Connect/true
+
+Disconnect only one device :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[deviceId]/Connect/false
+
+Disconnect all devices in the list :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/Connect/false
+
+Switch only one sensor to ON or OFF :
+http://[nscl_ip:port]/om2m/gscl/applications/[appId]/sensors/[deviceId]/Switch/[true or false]
+
+Switch only one device to ON or OFF :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[deviceId]/Switch/[true or false]
+
+Switch all devices to ON or OFF :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/Switch/[true or false]
+
+Adjust the interval of uploading data to database and web :
+http://[nscl_ip:port]/om2m/gscl/applications/[appId]/sensors/[deviceId]/AdjustUploadTime/[time(s)]
+
+Adjust the interval of delivering data from device to gscl :
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[deviceId]/AdjustDeviceTime/[time(s)]
+
+
+-----------------
+doRetrieve(GET)
+
+get sensor data directly
+http://[nscl_ip:port]/om2m/gscl/applications/[appId]/sensors
+
+get all devices in list
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors
+
+get all sensors included in one connected deivce
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[deviceId]
+
+get dangerous state in one sensor
+http://[nscl_ip:port]/om2m/gscl/applications/[appId]/sensors/dangerous
+
+check whether the device is connected
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/[deviceId]/Connect
+
+discovery surrounding device via private network
+http://[nscl_ip:port]/om2m/gscl/applications/InitDevice/sensors/discovery
+
+-----------------
+doDelete(DELETE)
+
+delete device in database and web
+http://[nscl_ip:port]/om2m/gscl/applications/[appId]
